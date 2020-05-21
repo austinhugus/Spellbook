@@ -3,8 +3,8 @@ import Spell from "./Models/Spell.js";
 let _state = {
   activeSpell: null,
   spells: [],
-  mySpell: null
-}
+  mySpells: [],
+};
 /** 
 spells: []
 };
@@ -15,7 +15,7 @@ spells: []
 let _listeners = {
   activeSpell: [],
   spells: [],
-  mySpell: []
+  mySpells: [],
 };
 
 //NOTE You should not need to change the code from this point down
@@ -69,7 +69,7 @@ class Store {
   commit(prop, data) {
     _validateProp(prop);
     _state[prop] = data;
-    _listeners[prop].forEach(fn => fn());
+    _listeners[prop].forEach((fn) => fn());
   }
 }
 
