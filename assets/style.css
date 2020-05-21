@@ -7,3 +7,7 @@ body {
 main {
     flex-grow: 1;
 }
+.list {
+    overflow-y: scroll;
+    height: 40vh;
+}

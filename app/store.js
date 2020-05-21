@@ -1,17 +1,21 @@
-import Value from "./Models/Value.js";
+import Spell from "./Models/Spell.js";
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  activeSpell: null,
+  spells: [],
+  mySpell: null
+}
+/** 
+spells: []
 };
-
+ 
 /** Collection of listeners to be called based on keyed state changes
- * @type {{[x:string]: function[]}}
- */
+* @type {{[x:string]: function[]}}
+*/
 let _listeners = {
-  activeValue: [],
-  values: []
+  activeSpell: [],
+  spells: [],
+  mySpell: []
 };
 
 //NOTE You should not need to change the code from this point down
